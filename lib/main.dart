@@ -2,6 +2,7 @@ import 'package:bloc_app/app_blocs.dart';
 import 'package:bloc_app/app_events.dart';
 import 'package:bloc_app/app_states.dart';
 import 'package:bloc_app/pages/Welcome/welcome.dart';
+import 'package:bloc_app/pages/sign_in/sign_in.dart';
 import 'package:bloc_app/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,8 +31,14 @@ class MyApp extends StatelessWidget {
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
           home: const WelcomePage(),
+          theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+              color: Colors.white,
+            ),
+          ),
           routes: {
             "myHomePage": (context) => const MyHomePage(),
+            "signIn": (context) => const SignIn(),
           },
         ),
       ),

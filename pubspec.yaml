@@ -38,8 +38,6 @@ dependencies:
   flutter_bloc:
   flutter_screenutil:
   dots_indicator:
-  intl:
-  cloud_firestore:
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +65,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
