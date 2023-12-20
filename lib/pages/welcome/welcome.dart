@@ -1,3 +1,4 @@
+import 'package:bloc_app/common/colors.dart';
 import 'package:bloc_app/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:bloc_app/pages/welcome/bloc/welcome_events.dart';
 import 'package:bloc_app/pages/welcome/bloc/welcome_states.dart';
@@ -38,7 +39,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       1,
                       "assets/images/reading.png",
                       "First See Learning",
-                      "Forget about a for of paper all knowledge in one learning",
+                      "Forget about for of paper all knowledge in one learning",
                       "Next",
                       context,
                     ),
@@ -66,12 +67,12 @@ class _WelcomePageState extends State<WelcomePage> {
                     dotsCount: 3,
                     position: state.page,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    decorator: DotsDecorator(
-                      color: Colors.black.withOpacity(0.5),
-                      activeColor: Colors.blue,
-                      size: const Size.square(8),
-                      activeSize: const Size(18, 8),
-                      activeShape: const RoundedRectangleBorder(
+                    decorator: const DotsDecorator(
+                      color: AppColors.primaryThirdElementText,
+                      activeColor: AppColors.primaryElement,
+                      size: Size.square(8),
+                      activeSize: Size(18, 8),
+                      activeShape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(5),
                         ),
@@ -105,19 +106,19 @@ class _WelcomePageState extends State<WelcomePage> {
             style: TextStyle(
               fontSize: 24.sp,
               fontWeight: FontWeight.normal,
-              color: Colors.black,
+              color: AppColors.primaryText,
             ),
           ),
         ),
         Container(
           width: 375.w,
-          padding: EdgeInsets.only(top: 8.h, left: 25.w, right: 25.w),
+          padding: EdgeInsets.only(left: 30.w, right: 30.w),
           child: Text(
             subTitle,
             style: TextStyle(
               fontSize: 16.sp,
               fontWeight: FontWeight.normal,
-              color: Colors.black.withOpacity(0.5),
+              color: AppColors.primarySecondaryElementText,
             ),
           ),
         ),
@@ -137,7 +138,7 @@ class _WelcomePageState extends State<WelcomePage> {
             width: 325.w,
             height: 50.h,
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: AppColors.primaryElement,
               borderRadius: BorderRadius.all(
                 Radius.circular(15.w),
               ),
